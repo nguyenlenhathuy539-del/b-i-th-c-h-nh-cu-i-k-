@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồn Việt - Khám Phá Văn Hóa Việt Nam</title>
+    <style>
+        /* CSS Reset & Cơ bản */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fdfaf6;
+        }
+
+        /* Thanh điều hướng */
+        nav {
+            background-color: #8b0000; /* Màu đỏ đô */
+            color: #ffd700; /* Màu vàng đồng */
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        nav h1 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Banner chính */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&q=80&w=1600') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        /* Nội dung chính */
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 3px;
+            background: #8b0000;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Lưới giới thiệu (Grid) */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            color: #8b0000;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 2.2rem; }
+            nav ul { display: none; } /* Ẩn menu trên mobile để đơn giản */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Thanh Menu -->
+    <nav>
+        <h1>HỒN VIỆT</h1>
+        <ul>
+            <li><a href="#intro">Giới Thiệu</a></li>
+            <li><a href="#cuisine">Ẩm Thực</a></li>
+            <li><a href="#costume">Trang Phục</a></li>
+            <li><a href="#festivals">Lễ Hội</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <header class="hero">
+        <h2>Vẻ Đẹp Bất Tận Của Việt Nam</h2>
+        <p>Hành trình khám phá 4000 năm văn hiến</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Mục Giới Thiệu -->
+        <section id="intro" style="margin-bottom: 50px; text-align: center;">
+            <h2 class="section-title">Văn Hóa Việt Nam</h2>
+            <p>Văn hóa Việt Nam là một nền văn hóa đa dạng, phong phú với 54 dân tộc anh em cùng sinh sống. Đó là sự kết hợp tinh tế giữa truyền thống lúa nước, lòng yêu nước nồng nàn và tinh thần hiếu học.</p>
+        </section>
+
+        <!-- Danh sách đặc điểm -->
+        <div class="grid">
+            <!-- Ẩm thực -->
+            <article class="card" id="cuisine">
+                <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&q=80&w=600" alt="Phở Việt Nam">
+                <div class="card-content">
+                    <h3>Tinh Hoa Ẩm Thực</h3>
+                    <p>Không chỉ là món ăn, ẩm thực Việt còn là sự cân bằng giữa Âm và Dương, sự hòa quyện của các loại gia vị tự nhiên tạo nên hương vị khó quên như Phở, Bánh Mì...</p>
+                </div>
+            </article>
+
+            <!-- Áo dài -->
+            <article class="card" id="costume">
+                <img src="data:image/jpeg;base64,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" alt="Áo dài">
+                <div class="card-content">
+                    <h3>Trang Phục Truyền Thống</h3>
+                    <p>Chiếc Áo Dài tôn vinh vẻ đẹp dịu dàng, kín đáo nhưng cũng đầy quyến rũ của người phụ nữ Việt, là biểu tượng văn hóa trên trường quốc tế.</p>
+                </div>
+            </article>
+
+            <!-- Lễ hội -->
+            <article class="card" id="festivals">
+                <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&q=80&w=600" alt="Lễ hội">
+                <div class="card-content">
+                    <h3>Lễ Hội Đặc Sắc</h3>
+                    <p>Từ Tết Nguyên Đán đoàn viên đến các lễ hội vùng cao, mỗi sự kiện đều mang đậm bản sắc tâm linh và lòng biết ơn nguồn cội.</p>
+                </div>
+            </article>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Khám Phá Việt Nam. Thiết kế với ❤️ dành cho văn hóa dân tộc.</p>
+    </footer>
+
+</body>
+</html>
